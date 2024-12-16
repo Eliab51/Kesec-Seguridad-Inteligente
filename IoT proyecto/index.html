@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KESEC - Seguridad Inteligente</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        header img:hover {
+            transform: rotate(360deg);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .left-section, .right-section {
+            width: 48%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .left-section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #333;
+            text-align: justify;
+        }
+        .right-section img {
+            max-width: 80%;
+            height: auto;
+        }
+        .sensor-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .sensor-section img {
+            max-width: 30%;
+            height: auto;
+            border: 5px solid #333;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+        .sensor-section img:hover {
+            transform: scale(1.1);
+        }
+        .sensor-section p {
+            font-size: 1.2em;
+            margin-top: 15px;
+            color: #666;
+            font-style: italic;
+        }
+        .benefits-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .benefits-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .benefits-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-section ul li {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .benefits-section ul li strong {
+            color: #333;
+        }
+        .how-it-works-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .how-it-works-section img {
+            max-width: 50%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .support-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .support-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        footer::after {
+            content: "¡Seguridad en cada paso!";
+            font-size: 1.2em;
+            color: #fff;
+            display: block;
+            margin-top: 10px;
+        }
+        .next-page {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .next-page a {
+            background-color: #333;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .next-page a:hover {
+            background-color: #555;
+        }
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .left-section, .right-section {
+                width: 100%;
+            }
+            .right-section img {
+                max-width: 90%;
+            }
+            .sensor-section img {
+                max-width: 50%;
+            }
+        }
+
+                .benefits-section {
+                background-color: #f8f9fa;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: 40px;
+            }
+            .benefits-section h2 {
+                font-size: 1.5em;
+                color: #333;
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            .benefits-section p {
+                font-size: 1.1em;
+                color: #666;
+                line-height: 1.7;
+                text-align: justify;
+                margin-bottom: 20px;
+            }
+            .benefits-section ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            .benefits-section ul li {
+                font-size: 1.1em;
+                color: #333;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+            .benefits-section ul li::before {
+                content: "\2022";
+                color: #007BFF;
+                font-weight: bold;
+                display: inline-block; 
+                width: 1em;
+                margin-left: -1em;
+            }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="C:\Users\Usuario\OneDrive\Escritorio\IoT proyecto\logo.jpeg" alt="Logo KESEC">
+        <h1>KESEC - Seguridad Inteligente</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <div class="left-section">
+                <p>
+                    En KESEC, nuestro principal objetivo es brindarte soluciones de seguridad innovadoras que se adapten a tus necesidades. Nos especializamos en el desarrollo de tecnologías avanzadas que permiten a los vehículos operar con mayor seguridad en todo tipo de entornos. Gracias a nuestros sensores ultrasónicos de alta precisión, garantizamos que tu automóvil estará protegido de colisiones y obstáculos, proporcionando una experiencia de conducción mucho más segura.
+                </p>
+            </div>
+            <div class="right-section">
+                <img src="C:\Users\alexl\OneDrive\Escritorio\IoT proyecto\carro.jpeg" alt="Carro con sensores ultrasónicos">
+            </div>
+        </div>
+
+        <div class="sensor-section">
+            <img src="C:\Users\alexl\OneDrive\Escritorio\IoT proyecto\sensores.jpg" alt="Sensores ultrasónicos">
+            <p>
+                Nuestros sensores ultrasónicos, ubicados en la parte delantera y trasera del vehículo, detectan cualquier obstáculo cercano. Esta tecnología avanzada mejora la maniobrabilidad y seguridad en espacios reducidos, ofreciendo alertas precisas al conductor.
+            </p>
+        </div>
+
+        <div class="benefits-section">
+            <h2>¿Por qué Elegir los Sensores Ultrasónicos de KESEC?</h2>
+            <p>
+                En KESEC ofrecemos soluciones de vanguardia que maximizan la seguridad vehicular. Nuestros sensores ultrasónicos están diseñados para proporcionar un nivel superior de protección y prevención de accidentes, adaptándose a todo tipo de vehículos y condiciones. A continuación, te presentamos las principales razones para elegir nuestros productos:
+            </p>
+            <ul>
+                <li><strong>Protección superior en cualquier entorno:</strong> Nuestros sensores brindan una cobertura precisa para evitar colisiones en espacios reducidos, estacionamientos y áreas con tráfico congestionado, mejorando la seguridad del conductor y los pasajeros.</li>
+                <li><strong>Alertas anticipadas y eficaces:</strong> Los sensores ultrasónicos de KESEC detectan objetos cercanos con gran exactitud, emitiendo alertas visuales y auditivas en tiempo real, permitiendo una reacción rápida ante cualquier obstáculo.</li>
+                <li><strong>Instalación fácil y versátil:</strong> Diseñados para una integración rápida, nuestros sensores pueden instalarse sin complicaciones en cualquier tipo de vehículo, desde automóviles compactos hasta vehículos pesados, sin necesidad de modificaciones adicionales.</li>
+                <li><strong>Tecnología de alta precisión:</strong> Equipados con tecnología ultrasónica de última generación, nuestros sensores garantizan un rendimiento óptimo en todas las condiciones climáticas, incluyendo lluvia, niebla y poca visibilidad.</li>
+                <li><strong>Compatibilidad universal:</strong> Los sensores ultrasónicos KESEC son compatibles con todos los tipos de vehículos, ofreciendo una solución ideal tanto para conductores individuales como para empresas que buscan mejorar la seguridad de sus flotas.</li>
+            </ul>
+        </div>
+        
+
+        <div class="how-it-works-section">
+            <h2>¿Cómo funciona la tecnología ultrasónica?</h2>
+            <p>Nuestros sensores emiten ondas ultrasónicas que rebotan en los objetos cercanos. Al medir el tiempo que tarda la onda en regresar al sensor, calculan la distancia precisa entre el vehículo y cualquier obstáculo. Esta información se traduce en alertas para el conductor, previniendo accidentes.</p>
+            <img src="C:\Users\alexl\OneDrive\Escritorio\IoT proyecto\diagrama.jpg" alt="Diagrama de funcionamiento del sensor ultrasónico">
+        </div>
+
+        <div class="next-page">
+            <a href="C:\Users\alexl\OneDrive\Escritorio\IoT proyecto\pag.html">Comenzar</a>
+        </div>
+
+        <div class="support-section">
+            <h2>Soporte y garantía</h2>
+            <p>Con cada compra, obtienes una garantía de 2 años y acceso a nuestro equipo de soporte técnico 24/7. Estamos aquí para ayudarte en cada paso del camino.</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 KESEC - Seguridad en cada paso.
+        <p>Nuestro correo: equipo3.iot2014@gmail.com </p>
+    </footer>
+
+</body>
+</html>
